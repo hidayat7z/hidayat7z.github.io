@@ -1,0 +1,227 @@
+@font-face {
+  font-family: "Agustina Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Agustina Regular"),
+    url("./assests/fonts/Agustina.woff") format("woff");
+}
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"),
+    url("./assests/fonts/Montserrat-Regular.ttf") format("woff");
+}
+@font-face {
+  font-family: "Google Sans Bold";
+  src: local("Google Sans Bold"),
+    url("./assests/fonts/GoogleSans-Bold.ttf") format("woff");
+}
+@font-face {
+  font-family: "Google Sans Bold Italic";
+  src: local("Google Sans Bold Italic"),
+    url("./assests/fonts/GoogleSans-BoldItalic.ttf") format("woff");
+}
+@font-face {
+  font-family: "Google Sans Italic";
+  src: local("Google Sans Italic"),
+    url("./assests/fonts/GoogleSans-Italic.ttf") format("woff");
+}
+@font-face {
+  font-family: "Google Sans Medium";
+  src: local("Google Sans Medium"),
+    url("./assests/fonts/GoogleSans-Medium.ttf") format("woff");
+}
+@font-face {
+  font-family: "Google Sans Medium Italic";
+  src: local("Google Sans Medium Italic"),
+    url("./assests/fonts/GoogleSans-MediumItalic.ttf") format("woff");
+}
+@font-face {
+  font-family: "Google Sans Regular";
+  src: local("Google Sans Regular"),
+    url("./assests/fonts/GoogleSans-Regular.ttf") format("woff");
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+html,
+body {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font: 19px / 23px Montserrat, "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* Media Query */
+@media (max-width: 1380px) {
+  html,
+  body {
+    font-size: 16px;
+    line-height: normal;
+  }
+}
+
+/* Portfolio refresh: calmer typography, clearer spacing, and accessible motion. */
+html {
+  background: #f7f5ef;
+  scroll-padding-top: 88px;
+}
+
+body {
+  background-color: #f7f5ef;
+  color: #202b27;
+  font-family: "Google Sans Regular", "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+a {
+  transition: color 160ms ease, background-color 160ms ease, transform 160ms ease;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid #b86b43;
+  outline-offset: 3px;
+}
+
+.main {
+  margin-top: 2rem;
+  max-width: 1520px;
+  padding: 24px;
+  width: 100%;
+}
+
+.skills-header {
+  font-size: clamp(34px, 5vw, 54px);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  margin: 0 0 40px;
+}
+
+.skills-main-div {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(32, 43, 39, 0.08);
+  border-radius: 22px;
+  box-shadow: 0 16px 45px rgba(32, 43, 39, 0.045);
+  gap: 36px;
+  margin: 22px 0;
+  padding: 28px;
+}
+
+.skills-heading {
+  font-size: clamp(28px, 3vw, 38px);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.skills-text {
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.experience-heading-text,
+.heading-text,
+.projects-heading-text,
+.contact-heading-text,
+.blog-heading-text,
+.address-heading-text {
+  font-size: clamp(34px, 5vw, 54px);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+}
+
+.experience-card,
+.degree-card .card-body,
+.cert-card,
+.repo-card-div {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(32, 43, 39, 0.09);
+  border-radius: 18px;
+  box-shadow: 0 14px 38px rgba(32, 43, 39, 0.055);
+}
+
+.experience-card {
+  padding: 18px;
+}
+
+.degree-card .card-body {
+  border-bottom: 1px solid rgba(32, 43, 39, 0.09);
+  border-left: 1px solid rgba(32, 43, 39, 0.09);
+  border-right: 1px solid rgba(32, 43, 39, 0.09);
+  margin: 16px 0;
+  padding: 12px;
+}
+
+.cert-card {
+  margin: 12px;
+  overflow: hidden;
+}
+
+.repo-card-div {
+  color: #53635a;
+  cursor: pointer;
+  transition: box-shadow 160ms ease, transform 160ms ease;
+}
+
+.repo-card-div:hover {
+  box-shadow: 0 20px 44px rgba(32, 43, 39, 0.1);
+  transform: translateY(-3px);
+}
+
+.main-button {
+  background: #293f34;
+  border-color: #293f34;
+  border-radius: 999px;
+  font-size: 15px;
+  letter-spacing: 0;
+  padding: 13px 22px;
+}
+
+.main-button:hover {
+  background: #a75e36;
+  border-color: #a75e36;
+  transform: translateY(-2px);
+}
+
+.footer-div {
+  border-top: 1px solid rgba(32, 43, 39, 0.08);
+  margin-top: 56px;
+  padding: 22px;
+}
+
+.footer-text {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+@media (max-width: 767px) {
+  .skills-main-div {
+    border-radius: 18px;
+    gap: 12px;
+    padding: 20px;
+  }
+
+  .experience-card {
+    padding: 14px 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

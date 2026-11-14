@@ -1,0 +1,162 @@
+.header {
+  align-items: center;
+  background: rgba(247, 245, 239, 0.96);
+  border-bottom: 1px solid rgba(32, 43, 39, 0.08);
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1520px;
+  padding: 10px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  backdrop-filter: blur(16px);
+}
+
+.header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header .logo {
+  align-items: center;
+  color: inherit;
+  display: inline-flex;
+  flex: 0 1 auto;
+  font-size: 1.1em;
+  line-height: 1.2;
+  min-width: 0;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.header .logo-name {
+  font-family: "Agustina Regular", cursive;
+  font-size: 1.4em;
+  font-weight: normal;
+  letter-spacing: 0;
+  flex: 0 1 auto;
+  min-width: 0;
+  padding: 0 5px;
+}
+
+.header .menu {
+  align-items: center;
+  display: flex;
+  font-family: "Google Sans Regular", sans-serif;
+  gap: 4px;
+}
+
+.header li a {
+  border-radius: 999px;
+  display: block;
+  font-size: 14px;
+  padding: 10px 13px;
+  text-decoration: none;
+}
+
+.header li a:hover {
+  background-color: rgba(41, 63, 52, 0.08);
+}
+
+.menu-toggle {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-radius: 10px;
+  color: #293f34;
+  cursor: pointer;
+  display: none;
+  height: 44px;
+  justify-content: center;
+  padding: 10px;
+  position: relative;
+  touch-action: manipulation;
+  width: 44px;
+  z-index: 32;
+}
+
+.menu-toggle:focus-visible {
+  outline: 3px solid #a75e36;
+  outline-offset: 2px;
+}
+
+.navicon,
+.navicon::before,
+.navicon::after {
+  background: currentColor;
+  border-radius: 2px;
+  display: block;
+  height: 2px;
+  position: absolute;
+  transition: transform 180ms ease, background 180ms ease;
+  width: 23px;
+}
+
+.navicon::before,
+.navicon::after {
+  content: "";
+  left: 0;
+}
+
+.navicon::before { transform: translateY(-7px); }
+.navicon::after { transform: translateY(7px); }
+.menu-toggle.is-open .navicon { background: transparent; }
+.menu-toggle.is-open .navicon::before { transform: rotate(45deg); }
+.menu-toggle.is-open .navicon::after { transform: rotate(-45deg); }
+
+@media (max-width: 767px) {
+  .header {
+    max-width: none;
+    padding: 8px 16px;
+  }
+
+  .header .logo {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .header .logo-name {
+    min-width: 0;
+    font-size: clamp(16px, 4.7vw, 20px);
+    padding: 0 3px;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+    flex: 0 0 44px;
+    margin-left: 8px;
+  }
+
+  .header .menu {
+    align-items: stretch;
+    background: #f7f5ef;
+    border: 1px solid rgba(32, 43, 39, 0.1);
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 16px 28px rgba(32, 43, 39, 0.12);
+    display: none;
+    flex-direction: column;
+    gap: 2px;
+    left: 0;
+    padding: 8px 16px 14px;
+    position: absolute;
+    right: 0;
+    top: 100%;
+  }
+
+  .header .menu.is-open {
+    display: flex;
+  }
+
+  .header li a {
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 12px 14px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 960px) {
+  .header { padding-left: 18px; padding-right: 18px; }
+  .header li a { font-size: 12px; padding: 9px; }
+}

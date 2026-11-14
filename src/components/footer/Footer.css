@@ -1,0 +1,18 @@
+.footer-text {
+  text-align: center;
+  /* color: #868e96; */
+  font-weight: bold;
+  font-family: "Google Sans Regular";
+}
+
+.footer-heart {
+  display: inline-block;
+  height: 1em;
+  margin-left: 2px;
+  vertical-align: -0.16em;
+  width: 1em;
+}
+
+.footer-div {
+  margin-top: 2rem;
+}
