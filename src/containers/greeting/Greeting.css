@@ -103,9 +103,16 @@
     justify-content: space-around;
   }
   .greeting-text {
-    font-size: 30px;
-    margin-top: 0px;
+    display: block;
+    font-size: clamp(40px, 11vw, 50px);
+    letter-spacing: -0.06em;
+    margin: 0 auto 12px;
     text-align: center;
+    width: 100%;
+  }
+  .greeting-text-div {
+    text-align: center;
+    width: 100%;
   }
   .greeting-nickname {
     font-size: 25px;
