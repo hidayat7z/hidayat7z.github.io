@@ -109,6 +109,8 @@
 @media (max-width: 767px) {
   .header {
     max-width: none;
+    box-sizing: border-box;
+    height: 61px;
     padding: 8px 16px;
   }
 
@@ -137,14 +139,15 @@
     box-shadow: 0 16px 28px rgba(32, 43, 39, 0.12);
     display: none;
     flex-direction: column;
-    bottom: 0;
     gap: 6px;
+    height: calc(100vh - 61px);
+    height: calc(100dvh - 61px);
     left: 0;
     overflow-y: auto;
     padding: 18px 16px calc(18px + env(safe-area-inset-bottom));
-    position: fixed;
+    position: absolute;
     right: 0;
-    top: 61px;
+    top: 100%;
     box-sizing: border-box;
     z-index: 31;
   }
