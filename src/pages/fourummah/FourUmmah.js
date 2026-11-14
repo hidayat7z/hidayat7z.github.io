@@ -39,7 +39,10 @@ export default function FourUmmah({ theme }) {
         <section className="fourummah-hero" aria-labelledby="fourummah-title">
           <Fade bottom duration={900} distance="24px">
             <div className="fourummah-hero-copy">
-              <p className="fourummah-eyebrow">A founder’s project</p>
+              <p className="fourummah-eyebrow fourummah-hero-eyebrow">
+                A vision <span className="fourummah-word-for">for</span> the{" "}
+                <span className="fourummah-word-ummah">Ummah</span>
+              </p>
               <h1 id="fourummah-title">
                 A digital home for the Muslim ecosystem.
               </h1>
@@ -87,6 +90,17 @@ export default function FourUmmah({ theme }) {
               <span className="fourummah-status">
                 <span aria-hidden="true" /> In development · Early access soon
               </span>
+              <nav className="fourummah-social-links" aria-label="4Ummah social links">
+                <a href="https://linktr.ee/4ummah" target="_blank" rel="noopener noreferrer">
+                  Linktree <span aria-hidden="true">↗</span>
+                </a>
+                <a href="https://www.linkedin.com/company/4ummahco" target="_blank" rel="noopener noreferrer">
+                  LinkedIn <span aria-hidden="true">↗</span>
+                </a>
+                <a href="https://www.instagram.com/4ummah.co/" target="_blank" rel="noopener noreferrer">
+                  Instagram <span aria-hidden="true">↗</span>
+                </a>
+              </nav>
             </div>
           </Fade>
         </section>

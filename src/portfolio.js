@@ -7,9 +7,8 @@ const settings = {
 
 //Home Page
 const greeting = {
-  title: "Muhammad Hidayat",
-  logo_name: "Muhammad Hidayat",
-  nickname: "@hidayat7z",
+  title: "Hidayat",
+  logo_name: "Hidayat",
   subTitle:
     "Curious by nature, I enjoy exploring ideas, building products and bringing people together around shared interests.",
 };

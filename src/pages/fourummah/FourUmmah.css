@@ -33,6 +33,10 @@
   text-transform: uppercase;
 }
 
+.fourummah-hero-eyebrow { text-transform: uppercase; }
+.fourummah-word-for { color: #16bda6; }
+.fourummah-word-ummah { color: #1748d3; }
+
 .fourummah-hero h1 {
   color: #202b27;
   font-family: "Google Sans Medium", sans-serif;
@@ -177,6 +181,25 @@
   height: 7px;
   width: 7px;
 }
+
+.fourummah-social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 14px;
+}
+
+.fourummah-social-links a {
+  border: 1px solid rgba(32, 43, 39, 0.1);
+  border-radius: 999px;
+  color: #52685a;
+  font: 12px "Google Sans Medium", sans-serif;
+  padding: 7px 10px;
+  text-decoration: none;
+}
+
+.fourummah-social-links a:hover { background: #f4f8f4; color: #1748d3; }
 
 .fourummah-building-section {
   border-top: 1px solid rgba(32, 43, 39, 0.1);
