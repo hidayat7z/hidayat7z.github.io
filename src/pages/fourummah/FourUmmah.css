@@ -1,0 +1,448 @@
+.fourummah-page {
+  color: #202b27;
+  width: 100%;
+}
+
+.fourummah-page main {
+  margin: 0 auto;
+  max-width: 1240px;
+  padding: 0 36px;
+}
+
+.fourummah-hero {
+  align-items: center;
+  display: grid;
+  gap: clamp(36px, 7vw, 92px);
+  grid-template-columns: minmax(0, 1.12fr) minmax(280px, 0.88fr);
+  min-height: 610px;
+  padding: 44px 0 72px;
+}
+
+.fourummah-hero-copy {
+  max-width: 660px;
+}
+
+.fourummah-eyebrow {
+  color: #a45d38;
+  font-family: "Google Sans Medium", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  line-height: 1.5;
+  margin: 0 0 16px;
+  text-transform: uppercase;
+}
+
+.fourummah-hero h1 {
+  color: #202b27;
+  font-family: "Google Sans Medium", sans-serif;
+  font-size: clamp(44px, 5.5vw, 72px);
+  font-weight: 600;
+  letter-spacing: -0.055em;
+  line-height: 1.04;
+  margin: 0;
+  max-width: 680px;
+}
+
+.fourummah-lead {
+  color: #66736c;
+  font-family: "Google Sans Regular", sans-serif;
+  font-size: clamp(18px, 1.75vw, 22px);
+  line-height: 1.65;
+  margin: 24px 0 0;
+  max-width: 650px;
+}
+
+.fourummah-actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.fourummah-primary-link,
+.fourummah-secondary-link {
+  align-items: center;
+  display: inline-flex;
+  font-family: "Google Sans Medium", sans-serif;
+  font-size: 15px;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.fourummah-primary-link {
+  background: #202b27;
+  border: 1px solid #202b27;
+  border-radius: 12px;
+  color: #f7f5ef;
+  min-height: 48px;
+  padding: 0 19px;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.fourummah-primary-link:hover {
+  background: #31473c;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.fourummah-secondary-link {
+  color: #31473c;
+  min-height: 44px;
+}
+
+.fourummah-secondary-link:hover {
+  color: #a45d38;
+}
+
+.fourummah-brand-card {
+  align-items: center;
+  background: #fff;
+  border: 1px solid rgba(32, 43, 39, 0.07);
+  border-radius: 28px;
+  box-shadow: 0 26px 70px rgba(32, 43, 39, 0.09);
+  display: flex;
+  flex-direction: column;
+  isolation: isolate;
+  justify-content: center;
+  min-height: 410px;
+  overflow: hidden;
+  padding: 30px;
+  position: relative;
+  text-align: center;
+}
+
+.fourummah-brand-glow {
+  background: radial-gradient(circle, rgba(55, 215, 189, 0.2), rgba(21, 69, 210, 0.04) 48%, transparent 72%);
+  height: 390px;
+  left: 50%;
+  position: absolute;
+  top: 46%;
+  transform: translate(-50%, -50%);
+  width: 390px;
+  z-index: -1;
+}
+
+.fourummah-logo-frame {
+  background: #fff;
+  border: 1px solid rgba(32, 43, 39, 0.06);
+  border-radius: 30px;
+  box-shadow: 0 14px 38px rgba(32, 43, 39, 0.08);
+  height: 190px;
+  overflow: hidden;
+  width: 190px;
+}
+
+.fourummah-logo-frame img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.fourummah-brand-name {
+  color: #202b27;
+  font-family: "Google Sans Medium", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin: 22px 0 4px;
+}
+
+.fourummah-brand-tagline {
+  color: #66736c;
+  font-family: "Google Sans Regular", sans-serif;
+  font-size: 15px;
+  margin: 0;
+}
+
+.fourummah-status {
+  align-items: center;
+  background: #f4f8f4;
+  border: 1px solid #e4ece4;
+  border-radius: 999px;
+  color: #52685a;
+  display: inline-flex;
+  font-family: "Google Sans Regular", sans-serif;
+  font-size: 12px;
+  gap: 8px;
+  margin-top: 22px;
+  padding: 8px 12px;
+}
+
+.fourummah-status > span {
+  background: #27a889;
+  border-radius: 50%;
+  height: 7px;
+  width: 7px;
+}
+
+.fourummah-building-section {
+  border-top: 1px solid rgba(32, 43, 39, 0.1);
+  padding: 78px 0 88px;
+  scroll-margin-top: 88px;
+}
+
+.fourummah-section-heading {
+  margin: 0 auto 34px;
+  max-width: 720px;
+  text-align: center;
+}
+
+.fourummah-section-heading h2,
+.fourummah-purpose-section h2,
+.fourummah-founder-section h2 {
+  color: #202b27;
+  font-family: "Google Sans Medium", sans-serif;
+  font-size: clamp(30px, 4vw, 46px);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 1.12;
+  margin: 0;
+}
+
+.fourummah-section-heading > p:last-child {
+  color: #66736c;
+  font-family: "Google Sans Regular", sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  margin: 16px auto 0;
+  max-width: 630px;
+}
+
+.fourummah-feature-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.fourummah-feature-card {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(32, 43, 39, 0.08);
+  border-radius: 20px;
+  min-height: 250px;
+  padding: 25px 24px;
+  transition: box-shadow 180ms ease, transform 180ms ease;
+}
+
+.fourummah-feature-card:hover {
+  box-shadow: 0 16px 38px rgba(32, 43, 39, 0.08);
+  transform: translateY(-3px);
+}
+
+.fourummah-feature-topline {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fourummah-feature-number {
+  color: #159f95;
+  font-family: "Google Sans Medium", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.fourummah-feature-status {
+  background: #f2f4ee;
+  border-radius: 999px;
+  color: #68756c;
+  font-family: "Google Sans Regular", sans-serif;
+  font-size: 11px;
+  padding: 6px 9px;
+}
+
+.fourummah-feature-card h3 {
+  color: #202b27;
+  font-family: "Google Sans Medium", sans-serif;
+  font-size: 21px;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+  margin: 32px 0 12px;
+}
+
+.fourummah-feature-card p,
+.fourummah-purpose-section > div:last-child > p:last-child,
+.fourummah-founder-section > p:not(.fourummah-eyebrow) {
+  color: #66736c;
+  font-family: "Google Sans Regular", sans-serif;
+  font-size: 15px;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.fourummah-purpose-section {
+  align-items: center;
+  background: #202b27;
+  border-radius: 26px;
+  color: #f7f5ef;
+  display: grid;
+  gap: clamp(32px, 7vw, 88px);
+  grid-template-columns: 0.7fr 1.3fr;
+  margin: 4px 0 82px;
+  overflow: hidden;
+  padding: clamp(32px, 6vw, 68px);
+  position: relative;
+}
+
+.fourummah-purpose-section::after {
+  background: linear-gradient(135deg, rgba(53, 215, 189, 0.25), rgba(21, 69, 210, 0.2));
+  border-radius: 50%;
+  content: "";
+  height: 310px;
+  left: -95px;
+  position: absolute;
+  top: -145px;
+  width: 310px;
+}
+
+.fourummah-purpose-mark {
+  align-items: center;
+  color: #f7f5ef;
+  display: flex;
+  font-family: "Google Sans Medium", sans-serif;
+  font-size: clamp(78px, 10vw, 132px);
+  font-weight: 700;
+  justify-content: center;
+  letter-spacing: -0.12em;
+  position: relative;
+  z-index: 1;
+}
+
+.fourummah-purpose-mark span:last-child {
+  color: #53d8c2;
+  margin-left: -8px;
+}
+
+.fourummah-purpose-section .fourummah-eyebrow {
+  color: #64d8c2;
+}
+
+.fourummah-purpose-section h2 {
+  color: #fff;
+  max-width: 680px;
+}
+
+.fourummah-purpose-section > div:last-child > p:last-child {
+  color: rgba(247, 245, 239, 0.75);
+  margin-top: 18px;
+  max-width: 690px;
+}
+
+.fourummah-founder-section {
+  margin: 0 auto 88px;
+  max-width: 760px;
+  text-align: center;
+}
+
+.fourummah-founder-section > p:not(.fourummah-eyebrow) {
+  font-size: 17px;
+  margin: 18px 0 25px;
+}
+
+@media (max-width: 850px) {
+  .fourummah-page main {
+    padding: 0 26px;
+  }
+
+  .fourummah-hero {
+    gap: 32px;
+    grid-template-columns: minmax(0, 1fr) minmax(230px, 0.8fr);
+    min-height: 540px;
+  }
+
+  .fourummah-brand-card {
+    min-height: 360px;
+    padding: 22px;
+  }
+
+  .fourummah-logo-frame {
+    height: 150px;
+    width: 150px;
+  }
+
+  .fourummah-feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fourummah-feature-card {
+    min-height: auto;
+  }
+
+  .fourummah-feature-card h3 {
+    margin-top: 23px;
+  }
+}
+
+@media (max-width: 620px) {
+  .fourummah-page main {
+    padding: 0 20px;
+  }
+
+  .fourummah-hero {
+    gap: 34px;
+    grid-template-columns: 1fr;
+    min-height: 0;
+    padding: 58px 0 54px;
+  }
+
+  .fourummah-hero h1 {
+    font-size: clamp(42px, 12vw, 58px);
+  }
+
+  .fourummah-lead {
+    font-size: 17px;
+    line-height: 1.65;
+    margin-top: 18px;
+  }
+
+  .fourummah-actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .fourummah-brand-card {
+    min-height: 345px;
+  }
+
+  .fourummah-building-section {
+    padding: 60px 0 66px;
+  }
+
+  .fourummah-section-heading {
+    text-align: left;
+  }
+
+  .fourummah-section-heading > p:last-child {
+    font-size: 16px;
+    margin-left: 0;
+  }
+
+  .fourummah-purpose-section {
+    gap: 18px;
+    grid-template-columns: 1fr;
+    margin-bottom: 62px;
+    padding: 30px 24px;
+  }
+
+  .fourummah-purpose-mark {
+    font-size: 72px;
+    justify-content: flex-start;
+  }
+
+  .fourummah-founder-section {
+    margin-bottom: 66px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fourummah-primary-link,
+  .fourummah-feature-card {
+    transition: none;
+  }
+}

@@ -7,6 +7,7 @@ import Experience from "../pages/experience/Experience";
 import Opensource from "../pages/opensource/Opensource";
 import Contact from "../pages/contact/ContactComponent";
 import Projects from "../pages/projects/Projects";
+import FourUmmah from "../pages/fourummah/FourUmmah";
 import { settings } from "../portfolio.js";
 
 export default class Main extends Component {
@@ -35,6 +36,10 @@ export default class Main extends Component {
                 render={(props) => (
                   <Experience {...props} theme={this.props.theme} />
                 )}
+              />
+              <Route
+                path="/4ummah"
+                render={(props) => <FourUmmah {...props} theme={this.props.theme} />}
               />
               <Route
                 path="/education"
@@ -90,6 +95,10 @@ export default class Main extends Component {
                 render={(props) => (
                   <Experience {...props} theme={this.props.theme} />
                 )}
+              />
+              <Route
+                path="/4ummah"
+                render={(props) => <FourUmmah {...props} theme={this.props.theme} />}
               />
               <Route
                 path="/education"
