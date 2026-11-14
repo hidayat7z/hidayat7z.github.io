@@ -9,7 +9,7 @@
   padding: 10px 24px;
   position: sticky;
   top: 0;
-  z-index: 30;
+  z-index: 1000;
   backdrop-filter: blur(16px);
 }
 
@@ -133,16 +133,20 @@
     align-items: stretch;
     background: #f7f5ef;
     border: 1px solid rgba(32, 43, 39, 0.1);
-    border-radius: 0 0 16px 16px;
+    border-radius: 0;
     box-shadow: 0 16px 28px rgba(32, 43, 39, 0.12);
     display: none;
     flex-direction: column;
-    gap: 2px;
+    bottom: 0;
+    gap: 6px;
     left: 0;
-    padding: 8px 16px 14px;
-    position: absolute;
+    overflow-y: auto;
+    padding: 18px 16px calc(18px + env(safe-area-inset-bottom));
+    position: fixed;
     right: 0;
-    top: 100%;
+    top: 61px;
+    box-sizing: border-box;
+    z-index: 31;
   }
 
   .header .menu.is-open {
