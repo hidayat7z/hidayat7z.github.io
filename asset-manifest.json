@@ -1,16 +1,19 @@
 {
   "files": {
-    "main.css": "./static/css/main.1e729446.chunk.css",
-    "main.js": "./static/js/main.3bb4154d.chunk.js",
-    "main.js.map": "./static/js/main.3bb4154d.chunk.js.map",
+    "main.css": "./static/css/main.87618f5c.chunk.css",
+    "main.js": "./static/js/main.de39ae6c.chunk.js",
+    "main.js.map": "./static/js/main.de39ae6c.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.fff6ee50.js",
     "runtime-main.js.map": "./static/js/runtime-main.fff6ee50.js.map",
-    "static/js/2.5140ebb1.chunk.js": "./static/js/2.5140ebb1.chunk.js",
-    "static/js/2.5140ebb1.chunk.js.map": "./static/js/2.5140ebb1.chunk.js.map",
+    "static/js/2.fde4821c.chunk.js": "./static/js/2.fde4821c.chunk.js",
+    "static/js/2.fde4821c.chunk.js.map": "./static/js/2.fde4821c.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.e81e9365df36032d7e2f29949c7ea72c.js": "./precache-manifest.e81e9365df36032d7e2f29949c7ea72c.js",
+    "precache-manifest.ba1badb235815b13395b5f0c917d48e7.js": "./precache-manifest.ba1badb235815b13395b5f0c917d48e7.js",
     "service-worker.js": "./service-worker.js",
-    "static/css/main.1e729446.chunk.css.map": "./static/css/main.1e729446.chunk.css.map",
+    "static/css/main.87618f5c.chunk.css.map": "./static/css/main.87618f5c.chunk.css.map",
+    "static/media/4ummah-arch-art.png": "./static/media/4ummah-arch-art.44ce1989.png",
+    "static/media/4ummah-arch-integrated.png": "./static/media/4ummah-arch-integrated.8ec4ff24.png",
+    "static/media/4ummah-design-2.png": "./static/media/4ummah-design-2.a811d5a7.png",
     "static/media/4ummah-logo.png": "./static/media/4ummah-logo.91c31029.png",
     "static/media/index.css": "./static/media/Montserrat-Regular.ee653992.ttf",
     "static/media/Xanimated_ashutosh.png": "./static/media/Xanimated_ashutosh.6c8410d0.png",
@@ -29,6 +32,7 @@
     "static/media/experience.svg": "./static/media/experience.85d6957f.svg",
     "static/media/all.css": "./static/media/fa-solid-900.c2801fb4.svg",
     "static/media/feelingProud.svg": "./static/media/feelingProud.a73310ea.svg",
+    "static/media/founder-builder-hero.png": "./static/media/founder-builder-hero.a824605b.png",
     "static/media/fullstack.svg": "./static/media/fullstack.589bec7d.svg",
     "static/media/gcp_logo.png": "./static/media/gcp_logo.ba18401b.png",
     "static/media/github_logo.png": "./static/media/github_logo.e64de169.png",
@@ -62,8 +66,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.fff6ee50.js",
-    "static/js/2.5140ebb1.chunk.js",
-    "static/css/main.1e729446.chunk.css",
-    "static/js/main.3bb4154d.chunk.js"
+    "static/js/2.fde4821c.chunk.js",
+    "static/css/main.87618f5c.chunk.css",
+    "static/js/main.de39ae6c.chunk.js"
   ]
 }
