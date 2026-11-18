@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { Route, Switch, HashRouter } from "react-router-dom";
 import Home from "../pages/home/HomeComponent";
 import Splash from "../pages/splash/Splash";
-import Education from "../pages/education/EducationComponent";
+// Keep the Education page implementation available for future use.
+// import Education from "../pages/education/EducationComponent";
 import Experience from "../pages/experience/Experience";
 import Opensource from "../pages/opensource/Opensource";
 import Contact from "../pages/contact/ContactComponent";
@@ -41,12 +42,7 @@ export default class Main extends Component {
                 path="/4ummah"
                 render={(props) => <FourUmmah {...props} theme={this.props.theme} />}
               />
-              <Route
-                path="/education"
-                render={(props) => (
-                  <Education {...props} theme={this.props.theme} />
-                )}
-              />
+              {/* Education route hidden from the UI; retain page files for later. */}
               <Route
                 path="/opensource"
                 render={(props) => (
@@ -100,12 +96,7 @@ export default class Main extends Component {
                 path="/4ummah"
                 render={(props) => <FourUmmah {...props} theme={this.props.theme} />}
               />
-              <Route
-                path="/education"
-                render={(props) => (
-                  <Education {...props} theme={this.props.theme} />
-                )}
-              />
+              {/* Education route hidden from the UI; retain page files for later. */}
               <Route
                 path="/opensource"
                 render={(props) => (
