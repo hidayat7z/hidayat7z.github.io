@@ -177,8 +177,20 @@ class Experience extends Component {
                   className="experience-header-detail-text subTitle"
                   style={{ color: theme.secondaryText }}
                 >
-                  {experience["description"]}
+                  Founder. Software engineer. Founding member at Nasheedio.
+                  Experienced in scaling startup operations, leading
+                  cross-functional teams, and building large-scale content
+                  libraries. Contributed to company growth from early-stage
+                  operations to 100,000+ app downloads and $400,000+ in funding.
                 </p>
+                <div className="experience-company-logos" aria-label="Companies founded and contributed to">
+                  <a href="https://www.4ummah.co/" target="_blank" rel="noopener noreferrer" aria-label="4Ummah website">
+                    <img src={require("../../assests/images/4ummah-logo.png")} alt="4Ummah" />
+                  </a>
+                  <a href="https://app.nasheedio.com/" target="_blank" rel="noopener noreferrer" aria-label="Nasheedio website">
+                    <img src={require("../../assests/images/nasheedio-logo.jpeg")} alt="Nasheedio" />
+                  </a>
+                </div>
               </div>
             </div>
           </Fade>
