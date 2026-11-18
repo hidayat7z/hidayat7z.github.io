@@ -138,8 +138,7 @@ export default function FourUmmah({ theme }) {
 
         <section className="fourummah-purpose-section">
           <div className="fourummah-purpose-mark" aria-hidden="true">
-            <span>4</span>
-            <span>U</span>
+            <img src={require("../../assests/images/4ummah-design-2.png")} alt="" />
           </div>
           <div>
             <p className="fourummah-eyebrow">Why it matters</p>

@@ -44,34 +44,40 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+:root {
+  --page-background: #f7f5ef;
+  --ink: #202b27;
+  --muted-ink: #66736c;
+  --accent: #a45d38;
+  --forest: #293f34;
+  --surface: rgba(255, 255, 255, 0.78);
+  --rule: rgba(32, 43, 39, 0.09);
+  --page-max-width: 1360px;
+  --page-title-size: clamp(40px, 4.5vw, 56px);
+  --section-title-size: clamp(30px, 3.6vw, 44px);
+  --hero-space: clamp(48px, 5vw, 64px);
+}
+
 html,
 body {
   scroll-behavior: smooth;
 }
 body {
   margin: 0;
-  font: 19px / 23px Montserrat, "Montserrat", sans-serif;
+  font: 16px / 1.6 "Google Sans Regular", "Segoe UI", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* Media Query */
-@media (max-width: 1380px) {
-  html,
-  body {
-    font-size: 16px;
-    line-height: normal;
-  }
-}
-
 /* Portfolio refresh: calmer typography, clearer spacing, and accessible motion. */
 html {
-  background: #f7f5ef;
+  background: var(--page-background);
   scroll-padding-top: 88px;
 }
 
 body {
-  background-color: #f7f5ef;
-  color: #202b27;
+  background-color: var(--page-background);
+  color: var(--ink);
   font-family: "Google Sans Regular", "Segoe UI", sans-serif;
   line-height: 1.6;
 }
@@ -134,7 +140,7 @@ input:focus-visible {
 .contact-heading-text,
 .blog-heading-text,
 .address-heading-text {
-  font-size: clamp(34px, 5vw, 54px);
+  font-size: var(--page-title-size);
   font-weight: 700;
   letter-spacing: -0.045em;
 }
@@ -143,8 +149,8 @@ input:focus-visible {
 .degree-card .card-body,
 .cert-card,
 .repo-card-div {
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid rgba(32, 43, 39, 0.09);
+  background: var(--surface);
+  border: 1px solid var(--rule);
   border-radius: 18px;
   box-shadow: 0 14px 38px rgba(32, 43, 39, 0.055);
 }
@@ -167,7 +173,7 @@ input:focus-visible {
 }
 
 .repo-card-div {
-  color: #53635a;
+  color: var(--muted-ink);
   cursor: pointer;
   transition: box-shadow 160ms ease, transform 160ms ease;
 }
@@ -178,8 +184,8 @@ input:focus-visible {
 }
 
 .main-button {
-  background: #293f34;
-  border-color: #293f34;
+  background: var(--forest);
+  border-color: var(--forest);
   border-radius: 999px;
   font-size: 15px;
   letter-spacing: 0;
@@ -187,13 +193,13 @@ input:focus-visible {
 }
 
 .main-button:hover {
-  background: #a75e36;
-  border-color: #a75e36;
+  background: var(--accent);
+  border-color: var(--accent);
   transform: translateY(-2px);
 }
 
 .footer-div {
-  border-top: 1px solid rgba(32, 43, 39, 0.08);
+  border-top: 1px solid var(--rule);
   margin-top: 56px;
   padding: 22px;
 }
@@ -212,6 +218,19 @@ input:focus-visible {
 
   .experience-card {
     padding: 14px 10px;
+  }
+}
+
+/* Keep the same page rail on tablet and phone across every route. */
+@media (max-width: 800px) {
+  .header,
+  .greet-main,
+  .experience-overview,
+  .experience-accord,
+  .fourummah-page main,
+  .projects-page-content,
+  .contact-content {
+    width: calc(100% - 32px);
   }
 }
 

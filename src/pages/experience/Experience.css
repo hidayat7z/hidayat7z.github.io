@@ -3,17 +3,18 @@
 }
 
 .experience-overview {
+  box-sizing: border-box;
   margin: 0 auto;
-  max-width: 1240px;
-  padding: 0 36px;
+  padding: 0;
+  width: min(calc(100% - 48px), var(--page-max-width));
 }
 
 .experience-overview-inner {
-  padding: 48px 0 42px;
+  padding: 24px 0 42px;
 }
 
 .experience-eyebrow {
-  color: #a45d38;
+  color: var(--accent);
   font: 700 11px/1.5 "Google Sans Medium", sans-serif;
   letter-spacing: 0.17em;
   margin: 0 0 12px;
@@ -26,7 +27,7 @@
 }
 
 .experience-intro-heading h1 {
-  font: 500 clamp(38px, 4.5vw, 54px)/1.05 "Google Sans Medium", sans-serif;
+  font: 500 var(--page-title-size)/1.08 "Google Sans Medium", sans-serif;
   letter-spacing: -0.045em;
   margin: 0;
   text-transform: uppercase;
@@ -42,12 +43,13 @@
   display: grid;
   gap: clamp(28px, 6vw, 80px);
   grid-template-columns: minmax(0, 1fr) auto;
-  margin: 22px auto 0;
-  max-width: 980px;
+  margin: 20px auto 0;
+  max-width: 1024px;
 }
 
 .experience-intro-copy {
-  font: 15px/1.75 "Google Sans Regular", sans-serif;
+  color: var(--muted-ink);
+  font: 16px/1.7 "Google Sans Regular", sans-serif;
   margin: 0;
   max-width: 680px;
 }
@@ -64,13 +66,14 @@
   border: 1px solid rgba(32, 43, 39, 0.08);
   border-radius: 15px;
   box-shadow: 0 7px 18px rgba(32, 43, 39, 0.05);
-  color: #52685a;
+  color: var(--muted-ink);
   display: flex;
   flex-direction: column;
   font: 11px "Google Sans Medium", sans-serif;
   gap: 6px;
   justify-content: center;
-  min-height: 86px;
+  height: 86px;
+  min-height: 0;
   padding: 9px 12px;
   text-decoration: none;
   transition: transform 160ms ease, box-shadow 160ms ease;
@@ -93,7 +96,7 @@
 }
 
 .experience-main .experience-accord {
-  margin: 0 16px 42px;
+  margin-bottom: 42px;
 }
 
 .accord-panel {
@@ -102,17 +105,18 @@
 
 @media (max-width: 800px) {
   .experience-overview {
-    padding: 0 22px;
+    width: calc(100% - 32px);
   }
 
   .experience-overview-inner {
-    padding: 38px 0 30px;
+    padding: 36px 0 30px;
   }
 
   .experience-intro-bottom {
     grid-template-columns: 1fr;
     gap: 18px;
     text-align: center;
+    width: 100%;
   }
 
   .experience-intro-copy {
@@ -124,7 +128,7 @@
   }
 
   .experience-main .experience-accord {
-    margin: 0 8px 32px;
+    margin-bottom: 32px;
   }
 }
 

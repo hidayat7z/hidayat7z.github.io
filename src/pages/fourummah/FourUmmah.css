@@ -1,12 +1,13 @@
 .fourummah-page {
-  color: #202b27;
+  color: var(--ink);
   width: 100%;
 }
 
 .fourummah-page main {
+  box-sizing: border-box;
   margin: 0 auto;
-  max-width: 1240px;
-  padding: 0 36px;
+  padding: 0;
+  width: min(calc(100% - 48px), var(--page-max-width));
 }
 
 .fourummah-hero {
@@ -15,7 +16,7 @@
   gap: clamp(36px, 7vw, 92px);
   grid-template-columns: minmax(0, 1.12fr) minmax(280px, 0.88fr);
   min-height: 610px;
-  padding: 44px 0 72px;
+  padding: var(--hero-space) 0 72px;
 }
 
 .fourummah-hero-copy {
@@ -23,7 +24,7 @@
 }
 
 .fourummah-eyebrow {
-  color: #a45d38;
+  color: var(--accent);
   font-family: "Google Sans Medium", sans-serif;
   font-size: 12px;
   font-weight: 700;
@@ -38,9 +39,9 @@
 .fourummah-word-ummah { color: #1748d3; }
 
 .fourummah-hero h1 {
-  color: #202b27;
+  color: var(--ink);
   font-family: "Google Sans Medium", sans-serif;
-  font-size: clamp(44px, 5.5vw, 72px);
+  font-size: var(--page-title-size);
   font-weight: 600;
   letter-spacing: -0.055em;
   line-height: 1.04;
@@ -49,7 +50,7 @@
 }
 
 .fourummah-lead {
-  color: #66736c;
+  color: var(--muted-ink);
   font-family: "Google Sans Regular", sans-serif;
   font-size: clamp(18px, 1.75vw, 22px);
   line-height: 1.65;
@@ -76,8 +77,8 @@
 }
 
 .fourummah-primary-link {
-  background: #202b27;
-  border: 1px solid #202b27;
+  background: var(--ink);
+  border: 1px solid var(--ink);
   border-radius: 12px;
   color: #f7f5ef;
   min-height: 48px;
@@ -92,18 +93,18 @@
 }
 
 .fourummah-secondary-link {
-  color: #31473c;
+  color: var(--forest);
   min-height: 44px;
 }
 
 .fourummah-secondary-link:hover {
-  color: #a45d38;
+  color: var(--accent);
 }
 
 .fourummah-brand-card {
   align-items: center;
   background: #fff;
-  border: 1px solid rgba(32, 43, 39, 0.07);
+  border: 1px solid var(--rule);
   border-radius: 28px;
   box-shadow: 0 26px 70px rgba(32, 43, 39, 0.09);
   display: flex;
@@ -146,7 +147,7 @@
 }
 
 .fourummah-brand-name {
-  color: #202b27;
+  color: var(--ink);
   font-family: "Google Sans Medium", sans-serif;
   font-size: 26px;
   font-weight: 700;
@@ -155,7 +156,7 @@
 }
 
 .fourummah-brand-tagline {
-  color: #66736c;
+  color: var(--muted-ink);
   font-family: "Google Sans Regular", sans-serif;
   font-size: 15px;
   margin: 0;
@@ -202,7 +203,7 @@
 .fourummah-social-links a:hover { background: #f4f8f4; color: #1748d3; }
 
 .fourummah-building-section {
-  border-top: 1px solid rgba(32, 43, 39, 0.1);
+  border-top: 1px solid var(--rule);
   padding: 78px 0 88px;
   scroll-margin-top: 88px;
 }
@@ -216,9 +217,9 @@
 .fourummah-section-heading h2,
 .fourummah-purpose-section h2,
 .fourummah-founder-section h2 {
-  color: #202b27;
+  color: var(--ink);
   font-family: "Google Sans Medium", sans-serif;
-  font-size: clamp(30px, 4vw, 46px);
+  font-size: var(--section-title-size);
   font-weight: 500;
   letter-spacing: -0.045em;
   line-height: 1.12;
@@ -226,7 +227,7 @@
 }
 
 .fourummah-section-heading > p:last-child {
-  color: #66736c;
+  color: var(--muted-ink);
   font-family: "Google Sans Regular", sans-serif;
   font-size: 17px;
   line-height: 1.7;
@@ -278,7 +279,7 @@
 }
 
 .fourummah-feature-card h3 {
-  color: #202b27;
+  color: var(--ink);
   font-family: "Google Sans Medium", sans-serif;
   font-size: 21px;
   font-weight: 500;
@@ -290,7 +291,7 @@
 .fourummah-feature-card p,
 .fourummah-purpose-section > div:last-child > p:last-child,
 .fourummah-founder-section > p:not(.fourummah-eyebrow) {
-  color: #66736c;
+  color: var(--muted-ink);
   font-family: "Google Sans Regular", sans-serif;
   font-size: 15px;
   line-height: 1.75;
@@ -299,7 +300,7 @@
 
 .fourummah-purpose-section {
   align-items: center;
-  background: #202b27;
+  background: linear-gradient(118deg, #061522 0%, #081b2a 56%, #0a1d29 100%);
   border-radius: 26px;
   color: #f7f5ef;
   display: grid;
@@ -324,20 +325,19 @@
 
 .fourummah-purpose-mark {
   align-items: center;
-  color: #f7f5ef;
   display: flex;
-  font-family: "Google Sans Medium", sans-serif;
-  font-size: clamp(78px, 10vw, 132px);
-  font-weight: 700;
   justify-content: center;
-  letter-spacing: -0.12em;
   position: relative;
   z-index: 1;
 }
 
-.fourummah-purpose-mark span:last-child {
-  color: #53d8c2;
-  margin-left: -8px;
+.fourummah-purpose-mark img {
+  display: block;
+  height: auto;
+  max-height: 420px;
+  mix-blend-mode: screen;
+  object-fit: contain;
+  width: min(100%, 340px);
 }
 
 .fourummah-purpose-section .fourummah-eyebrow {
@@ -367,10 +367,6 @@
 }
 
 @media (max-width: 850px) {
-  .fourummah-page main {
-    padding: 0 26px;
-  }
-
   .fourummah-hero {
     gap: 32px;
     grid-template-columns: minmax(0, 1fr) minmax(230px, 0.8fr);
@@ -401,19 +397,15 @@
 }
 
 @media (max-width: 620px) {
-  .fourummah-page main {
-    padding: 0 20px;
-  }
-
   .fourummah-hero {
     gap: 34px;
     grid-template-columns: 1fr;
     min-height: 0;
-    padding: 58px 0 54px;
+    padding: 40px 0 54px;
   }
 
   .fourummah-hero h1 {
-    font-size: clamp(42px, 12vw, 58px);
+    font-size: clamp(38px, 9vw, 46px);
   }
 
   .fourummah-lead {

@@ -1,5 +1,7 @@
 .experience-accord {
-  margin: 50px;
+  box-sizing: border-box;
+  margin: 0 auto 42px;
+  width: min(calc(100% - 48px), var(--page-max-width));
 }
 
 .accord-panel {
@@ -8,6 +10,48 @@
 
 @media (max-width: 768px) {
   .experience-accord {
-    margin: 20px;
+    margin-bottom: 32px;
+    width: calc(100% - 32px);
+  }
+}
+
+.experience-accord > ul[data-baseweb="accordion"] {
+  display: grid;
+  gap: 12px;
+}
+
+.experience-accord > ul[data-baseweb="accordion"] > li {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.experience-accord > ul[data-baseweb="accordion"] > li > div[role="button"] {
+  background: transparent !important;
+  border: 0 !important;
+  color: var(--ink) !important;
+  font: 600 18px/1.3 "Google Sans Medium", sans-serif !important;
+  padding: 18px 22px !important;
+}
+
+.experience-accord > ul[data-baseweb="accordion"] > li > div[role="button"]:hover {
+  background: rgba(41, 63, 52, 0.045) !important;
+}
+
+.experience-accord > ul[data-baseweb="accordion"] > li > div:not([role="button"]) {
+  background: transparent !important;
+  color: var(--ink) !important;
+  padding: 20px !important;
+}
+
+@media (max-width: 600px) {
+  .experience-accord > ul[data-baseweb="accordion"] > li > div[role="button"] {
+    font-size: 16px !important;
+    padding: 16px 18px !important;
+  }
+
+  .experience-accord > ul[data-baseweb="accordion"] > li > div:not([role="button"]) {
+    padding: 14px !important;
   }
 }

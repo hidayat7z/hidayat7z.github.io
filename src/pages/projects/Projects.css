@@ -4,13 +4,14 @@
 }
 
 .projects-page-content {
+  box-sizing: border-box;
   margin: 0 auto;
-  max-width: 1320px;
-  padding: 0 36px;
+  padding: 0;
+  width: min(calc(100% - 48px), var(--page-max-width));
 }
 
 .selected-work-section {
-  padding: 64px 0 78px;
+  padding: var(--hero-space) 0 78px;
 }
 
 .projects-intro {
@@ -19,7 +20,7 @@
 }
 
 .projects-eyebrow {
-  color: #a45d38;
+  color: var(--accent);
   font: 700 12px/1.5 "Google Sans Medium", sans-serif;
   letter-spacing: 0.16em;
   margin: 0 0 12px;
@@ -27,13 +28,14 @@
 }
 
 .projects-intro h1 {
-  font: 500 clamp(34px, 4.6vw, 54px)/1.1 "Google Sans Medium", sans-serif;
+  font: 500 var(--page-title-size)/1.08 "Google Sans Medium", sans-serif;
   letter-spacing: -0.045em;
   margin: 0;
 }
 
 .projects-intro > p:last-child,
 .technical-projects-heading p {
+  color: var(--muted-ink);
   font: 17px/1.65 "Google Sans Regular", sans-serif;
   margin: 14px auto 0;
   max-width: 660px;
@@ -43,14 +45,13 @@
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin: 0 auto;
-  max-width: 1120px;
+  margin: 0;
   text-align: left;
 }
 
 .featured-project-card {
-  background: rgba(255, 255, 255, 0.78);
-  border: 1px solid rgba(32, 43, 39, 0.08);
+  background: var(--surface);
+  border: 1px solid var(--rule);
   border-radius: 22px;
   box-shadow: 0 12px 34px rgba(32, 43, 39, 0.055);
   display: flex;
@@ -94,34 +95,34 @@
 .nasheedio-feature .featured-project-logo img { border-radius: 50%; }
 
 .featured-project-label {
-  color: #66736c;
+  color: var(--muted-ink);
   font: 13px "Google Sans Regular", sans-serif;
 }
 
 .featured-project-card h2 {
-  color: #202b27;
+  color: var(--ink);
   font: 500 24px/1.25 "Google Sans Medium", sans-serif;
   letter-spacing: -0.03em;
   margin: 23px 0 10px;
 }
 
 .featured-project-card > p {
-  color: #66736c;
+  color: var(--muted-ink);
   font: 15px/1.7 "Google Sans Regular", sans-serif;
   margin: 0 0 22px;
 }
 
 .featured-project-card > a {
-  color: #293f34;
+  color: var(--forest);
   font: 700 14px "Google Sans Medium", sans-serif;
   margin-top: auto;
   text-decoration: none;
 }
 
-.featured-project-card > a:hover { color: #a45d38; }
+.featured-project-card > a:hover { color: var(--accent); }
 
 .technical-projects-section {
-  border-top: 1px solid rgba(32, 43, 39, 0.1);
+  border-top: 1px solid var(--rule);
   padding: 64px 0 70px;
 }
 
@@ -130,13 +131,12 @@
   display: flex;
   gap: 28px;
   justify-content: space-between;
-  margin: 0 auto 28px;
-  max-width: 1120px;
+  margin: 0 0 28px;
   text-align: left;
 }
 
 .technical-projects-heading h2 {
-  font: 500 clamp(30px, 4vw, 42px)/1.1 "Google Sans Medium", sans-serif;
+  font: 500 var(--section-title-size)/1.12 "Google Sans Medium", sans-serif;
   letter-spacing: -0.04em;
   margin: 0;
 }
@@ -147,8 +147,7 @@
   display: grid;
   gap: 16px;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr));
-  margin: 0 auto;
-  max-width: 1120px;
+  margin: 0;
   text-align: left;
 }
 
@@ -175,10 +174,10 @@
 .technical-projects-more { margin-top: 30px; }
 
 @media (max-width: 700px) {
-  .projects-page-content { padding: 0 20px; }
+  .projects-page-content { width: calc(100% - 32px); }
   .selected-work-section { padding: 46px 0 54px; }
   .projects-intro { margin-bottom: 24px; text-align: left; }
-  .projects-intro h1 { font-size: clamp(34px, 9vw, 46px); }
+  .projects-intro h1 { font-size: clamp(38px, 9vw, 46px); }
   .projects-intro > p:last-child { font-size: 15px; }
   .featured-project-grid { grid-template-columns: 1fr; }
   .featured-project-card { min-height: 0; padding: 22px; }

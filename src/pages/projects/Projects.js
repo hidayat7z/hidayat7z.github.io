@@ -41,8 +41,11 @@ class Projects extends Component {
           <Fade bottom duration={900} distance="24px">
             <section className="selected-work-section" aria-labelledby="selected-work-title">
               <div className="projects-intro">
-                <h1 id="selected-work-title" style={{ color: theme.text }}>
+                {/* <h1 id="selected-work-title" style={{ color: theme.text }}>
                   Products and systems built to make a difference.
+                </h1> */}
+                 <h1 id="fourummah-title">
+                Products and systems built to make a difference.
                 </h1>
                 <p style={{ color: theme.secondaryText }}>
                   A few things I have helped build—from a community-focused platform to the content operations behind a growing product.

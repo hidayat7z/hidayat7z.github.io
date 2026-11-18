@@ -152,7 +152,7 @@ class Experience extends Component {
         <main className="experience-overview">
           <Fade bottom duration={2000} distance="40px">
             <div className="experience-overview-inner">
-              <p className="experience-eyebrow">Founder · Operator · Software Engineer</p>
+              <p className="experience-eyebrow">Founder · Founding Member · Software Engineer</p>
               <div className="experience-intro-heading">
                 <h1 style={{ color: theme.text }}>Experience</h1>
                 <p style={{ color: theme.secondaryText }}>{experience.subtitle}</p>
@@ -164,11 +164,9 @@ class Experience extends Component {
                 <div className="experience-company-logos" aria-label="Companies founded and contributed to">
                   <a href="https://www.4ummah.co/" target="_blank" rel="noopener noreferrer" aria-label="4Ummah website">
                     <img src={require("../../assests/images/4ummah-logo.png")} alt="4Ummah" />
-                    <span>Founder</span>
                   </a>
                   <a href="https://app.nasheedio.com/" target="_blank" rel="noopener noreferrer" aria-label="Nasheedio website">
                     <img src={require("../../assests/images/nasheedio-logo.jpeg")} alt="Nasheedio" />
-                    <span>Founding Member</span>
                   </a>
                 </div>
               </div>

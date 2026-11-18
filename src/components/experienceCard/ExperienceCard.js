@@ -8,7 +8,7 @@ class ExperienceCard extends Component {
     return (
       <div
         className="experience-card"
-        style={{ border: `1px solid ${experience["color"]}` }}
+        style={{ border: "1px solid var(--rule)" }}
       >
         <div className="experience-card-logo-div">
           <img
@@ -56,6 +56,16 @@ class ExperienceCard extends Component {
           </div>
           {experience.positions ? (
             <div className="experience-positions">
+              {experience.highlights && (
+                <ul className="experience-position-highlights" aria-label={`${experience.company} highlights`}>
+                  {experience.highlights.map((highlight) => (
+                    <li key={highlight.label}>
+                      <strong>{highlight.value}</strong>
+                      <span>{highlight.label}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
               {experience.positions.map((position) => (
                 <div className="experience-position" key={position.title}>
                   <div className="experience-position-heading">
@@ -69,16 +79,6 @@ class ExperienceCard extends Component {
                   <p className="experience-card-description" style={{ color: theme.text }}>
                     {position.description}
                   </p>
-                  {position.highlights && (
-                    <ul className="experience-position-highlights" aria-label={`${position.title} highlights`}>
-                      {position.highlights.map((highlight) => (
-                        <li key={highlight.label}>
-                          <strong>{highlight.value}</strong>
-                          <span>{highlight.label}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
                 </div>
               ))}
             </div>

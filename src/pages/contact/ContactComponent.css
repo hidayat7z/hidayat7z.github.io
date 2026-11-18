@@ -3,20 +3,47 @@
 }
 
 .contact-content {
+  box-sizing: border-box;
   margin: 0 auto;
-  max-width: 1160px;
-  min-height: calc(100vh - 132px);
-  padding: 0 32px;
+  min-height: 0;
+  padding: 0;
+  width: min(calc(100% - 48px), var(--page-max-width));
+}
+
+.contact-content .quran-verse {
+  margin: 10px auto 12px;
+  width: 100%;
+}
+
+.contact-content .quran-verse-card {
+  height: 310px;
+  padding: 18px 30px;
+}
+
+.contact-content .quran-verse-arabic {
+  font-size: clamp(24px, 2.3vw, 30px);
+  line-height: 1.65;
+  margin: 12px auto 8px;
+}
+
+.contact-content .quran-verse-translation {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.contact-content .quran-verse-footer {
+  margin-top: auto;
+  padding-top: 8px;
 }
 
 .contact-hero {
-  padding: clamp(44px, 7vh, 78px) 0 34px;
+  padding: 18px 0 16px;
   text-align: center;
 }
 
 .contact-eyebrow,
 .contact-card-eyebrow {
-  color: #a45d38;
+  color: var(--accent);
   font: 700 11px/1.5 "Google Sans Medium", sans-serif;
   letter-spacing: 0.16em;
   margin: 0 0 12px;
@@ -24,14 +51,15 @@
 }
 
 .contact-heading-text {
-  font: 500 clamp(42px, 5vw, 58px)/1.06 "Google Sans Medium", sans-serif;
+  font: 500 clamp(38px, 4vw, 48px)/1.08 "Google Sans Medium", sans-serif;
   letter-spacing: -0.045em;
   margin: 0;
 }
 
 .contact-header-detail-text {
-  font: 17px/1.6 "Google Sans Regular", sans-serif;
-  margin: 14px auto 18px;
+  color: var(--muted-ink);
+  font: 15px/1.5 "Google Sans Regular", sans-serif;
+  margin: 8px auto 10px;
   max-width: 560px;
 }
 
@@ -44,20 +72,19 @@
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin: 0 auto 48px;
-  max-width: 900px;
+  margin: 0 0 12px;
 }
 
 .contact-card {
   align-items: center;
-  background: rgba(255, 255, 255, 0.78);
-  border: 1px solid rgba(32, 43, 39, 0.08);
+  background: var(--surface);
+  border: 1px solid var(--rule);
   border-radius: 20px;
   box-shadow: 0 12px 32px rgba(32, 43, 39, 0.06);
   display: flex;
   flex-direction: column;
-  min-height: 230px;
-  padding: 24px;
+  min-height: 174px;
+  padding: 16px 20px;
   text-align: center;
 }
 
@@ -65,7 +92,7 @@
   align-items: center;
   background: #e9f1e9;
   border-radius: 13px;
-  color: #293f34;
+  color: var(--forest);
   display: inline-flex;
   font-size: 20px;
   height: 42px;
@@ -88,6 +115,7 @@
 }
 
 .contact-card > p:not(.contact-card-eyebrow) {
+  color: var(--muted-ink);
   font: 14px/1.55 "Google Sans Regular", sans-serif;
   margin: 10px 0 14px;
 }
@@ -99,7 +127,7 @@
 .contact-email,
 .contact-phone,
 .contact-location-link {
-  color: #52685a;
+  color: var(--forest);
   font: 14px "Google Sans Medium", sans-serif;
   margin-top: 12px;
   text-decoration: none;
@@ -107,22 +135,43 @@
 
 .contact-email:hover,
 .contact-phone:hover,
-.contact-location-link:hover { color: #a45d38; }
+.contact-location-link:hover { color: var(--accent); }
 
 .contact-location-link { font-size: 12px; margin-top: auto; padding-top: 14px; }
 
 @media (max-width: 650px) {
-  .contact-content { padding: 0 20px; }
-  .contact-hero { padding: 34px 0 24px; }
-  .contact-heading-text { font-size: 38px; }
-  .contact-header-detail-text { font-size: 15px; margin: 10px auto 14px; }
-  .contact-cards { grid-template-columns: 1fr; gap: 12px; margin-bottom: 30px; }
-  .contact-card { min-height: 205px; padding: 20px; }
-  .contact-card h2 { font-size: 21px; }
+  .contact-content { width: calc(100% - 32px); }
+  .contact-content .quran-verse { margin: 8px auto 10px; }
+  .contact-content .quran-verse-card { height: 390px; padding: 18px 16px; }
+  .contact-content .quran-verse-arabic { font-size: clamp(22px, 6vw, 27px); line-height: 1.8; }
+  .contact-content .quran-verse-translation { font-size: 13px; line-height: 1.45; }
+  .contact-hero { padding: 14px 0 12px; }
+  .contact-heading-text { font-size: clamp(34px, 9vw, 40px); }
+  .contact-header-detail-text { font-size: 14px; margin: 6px auto 8px; }
+  .contact-hero .social-media-div { gap: 7px; }
+  .contact-hero .social-media-logo,
+  .contact-hero .icon-button i { width: 2.2rem; height: 2.2rem; line-height: 2.2rem; }
+  .contact-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-bottom: 12px; }
+  .contact-card { min-height: 190px; padding: 12px 10px; }
+  .contact-card-icon { height: 34px; width: 34px; margin-bottom: 7px; }
+  .contact-envelope-icon { font-size: 25px; }
+  .contact-card h2 { font-size: 19px; }
+  .contact-card > p:not(.contact-card-eyebrow) { margin: 6px 0 8px; }
+  .contact-email, .contact-phone { font-size: 12px; margin-top: 7px; }
+  .contact-email { overflow-wrap: anywhere; }
+  .contact-location-link { padding-top: 6px; }
+  .contact-card .main-button { font-size: 11px; letter-spacing: 0.04em; padding: 10px 6px; white-space: normal; }
+}
+
+@media (max-width: 370px) {
+  .contact-card { padding-inline: 8px; }
+  .contact-card h2 { font-size: 17px; }
+  .contact-card .main-button { font-size: 10px; }
 }
 
 @media (max-height: 760px) and (min-width: 651px) {
-  .contact-hero { padding-top: 32px; padding-bottom: 22px; }
-  .contact-cards { margin-bottom: 24px; }
-  .contact-card { min-height: 190px; padding: 18px; }
+  .contact-content .quran-verse-card { height: 286px; }
+  .contact-hero { padding-top: 12px; padding-bottom: 10px; }
+  .contact-cards { margin-bottom: 8px; }
+  .contact-card { min-height: 150px; padding: 12px; }
 }

@@ -4,6 +4,7 @@ import Footer from "../../components/footer/Footer";
 import TopButton from "../../components/topButton/TopButton";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
+import ReflectionCarousel from "../../components/reflectionCarousel/ReflectionCarousel";
 import { Fade } from "react-reveal";
 import "./ContactComponent.css";
 import { contactPageData } from "../../portfolio.js";
@@ -15,6 +16,7 @@ export default function Contact({ theme, onToggle }) {
     <div className="contact-main">
       <Header theme={theme} />
       <main className="contact-content">
+        <ReflectionCarousel />
         <Fade bottom duration={800} distance="20px">
           <section className="contact-hero">
             <h1 className="contact-heading-text" style={{ color: theme.text }}>

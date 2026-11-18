@@ -1,15 +1,16 @@
 .header {
   align-items: center;
   background: rgba(247, 245, 239, 0.96);
-  border-bottom: 1px solid rgba(32, 43, 39, 0.08);
+  border-bottom: 1px solid var(--rule);
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  max-width: 1520px;
-  padding: 10px 24px;
+  padding: 10px 0;
   position: sticky;
   top: 0;
   z-index: 1000;
+  width: min(calc(100% - 48px), var(--page-max-width));
   backdrop-filter: blur(16px);
 }
 
@@ -108,10 +109,9 @@
 
 @media (max-width: 767px) {
   .header {
-    max-width: none;
-    box-sizing: border-box;
     height: 61px;
-    padding: 8px 16px;
+    padding: 8px 0;
+    width: calc(100% - 32px);
   }
 
   .header .logo {
@@ -166,6 +166,5 @@
 }
 
 @media (min-width: 768px) and (max-width: 960px) {
-  .header { padding-left: 18px; padding-right: 18px; }
   .header li a { font-size: 12px; padding: 9px; }
 }

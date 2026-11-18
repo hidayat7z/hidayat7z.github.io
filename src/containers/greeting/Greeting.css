@@ -5,10 +5,11 @@
   margin-top: 4rem;
 }
 .greet-main {
-  width: min(1520px, calc(100% - 64px));
-  padding: 64px 0 72px;
+  box-sizing: border-box;
+  width: min(calc(100% - 48px), var(--page-max-width));
+  padding: var(--hero-space) 0 72px;
   margin: 0px auto;
-  margin-top: 1rem;
+  margin-top: 0;
 }
 
 .gretting-main {
@@ -40,12 +41,12 @@
 }
 
 .greeting-eyebrow {
-  color: #8c5d3b;
+  color: var(--accent);
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.16em;
   line-height: 1.5;
-  margin: 40px 0 0;
+  margin: 0 0 14px;
 }
 
 .greeting-nickname {
@@ -64,7 +65,7 @@
 
 .greeting-contact-link {
   align-items: center;
-  color: #293f34;
+  color: var(--forest);
   display: inline-flex;
   font-size: 16px;
   font-weight: 700;
@@ -73,7 +74,7 @@
 }
 
 .greeting-contact-link:hover {
-  color: #a75e36;
+  color: var(--accent);
 }
 
 .greeting-image-div > * {
@@ -96,22 +97,23 @@
   width: 580px;
 }
 
-/* Media Query */
-@media (max-width: 1380px) {
-  .greeting-text {
-    font-size: 50px;
-  }
-  .greeting-text-p {
-    font-size: 20px;
-  }
+.founder-builder-hero {
+  display: block;
+  height: auto;
+  max-height: 540px;
+  max-width: 100%;
+  object-fit: contain;
+  width: 650px;
 }
+
+/* Media Query */
 @media (max-width: 768px) {
   .greet-main {
-    width: calc(100% - 40px);
+    width: calc(100% - 32px);
     padding: 32px 0 44px;
   }
   .greeting-eyebrow {
-    margin-top: 18px;
+    margin: 0 0 12px;
     text-align: center;
   }
   .button-greeting-div {
@@ -136,7 +138,7 @@
   .greeting-text-p {
     font-size: 16px;
     margin-right: 0px;
-    line-height: normal;
+    line-height: 1.55;
     text-align: center;
   }
   .greeting-main {
@@ -149,7 +151,8 @@
     padding: 0;
   }
 
-  .builder-illustration {
+  .builder-illustration,
+  .founder-builder-hero {
     width: 100%;
   }
 

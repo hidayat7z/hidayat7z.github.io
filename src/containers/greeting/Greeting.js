@@ -3,7 +3,7 @@ import "./Greeting.css";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import { greeting } from "../../portfolio";
 import { Fade } from "react-reveal";
-import BuilderIllustration from "./BuilderIllustration";
+import FeelingProud from "./FeelingProud";
 
 export default function Greeting(props) {
   const theme = props.theme;
@@ -13,7 +13,8 @@ export default function Greeting(props) {
         <div className="greeting-main">
           <div className="greeting-text-div">
             <div>
-              <p className="greeting-eyebrow">FOUNDER · SOFTWARE ENGINEER</p>
+              {/* <p className="greeting-eyebrow">FOUNDER · SOFTWARE ENGINEER</p> */}
+              <p className="greeting-eyebrow">FOUNDER ·</p>
               <h1 className="greeting-text" style={{ color: theme.text }}>
                 {greeting.title}
               </h1>
@@ -32,7 +33,7 @@ export default function Greeting(props) {
             </div>
           </div>
           <div className="greeting-image-div">
-            <BuilderIllustration />
+            <FeelingProud theme={theme} />
           </div>
         </div>
       </div>
