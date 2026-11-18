@@ -88,67 +88,58 @@
   width: 40px;
 }
 
-.experience-company-logos a:last-child img { border-radius: 50%; }
-
-.experience-proof-points {
-  border-bottom: 1px solid rgba(32, 43, 39, 0.1);
-  border-top: 1px solid rgba(32, 43, 39, 0.1);
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  margin: 25px auto 0;
-  max-width: 980px;
-  padding: 16px 0;
+.experience-company-logos a:last-child img {
+  border-radius: 50%;
 }
 
-.experience-proof-points > div {
-  align-items: baseline;
-  border-right: 1px solid rgba(32, 43, 39, 0.1);
-  display: flex;
-  gap: 8px;
-  justify-content: center;
-  padding: 0 10px;
-}
-
-.experience-proof-points > div:last-child { border-right: 0; }
-
-.experience-proof-points strong {
-  color: #202b27;
-  font: 600 20px "Google Sans Medium", sans-serif;
-  letter-spacing: -0.04em;
-  white-space: nowrap;
-}
-
-.experience-proof-points span {
-  color: #66736c;
-  font: 11px "Google Sans Regular", sans-serif;
-  white-space: nowrap;
-}
-
-.experience-accord {
+.experience-main .experience-accord {
   margin: 0 16px 42px;
 }
 
-.accord-panel { font-family: "Google Sans Regular"; }
+.accord-panel {
+  font-family: "Google Sans Regular";
+}
 
 @media (max-width: 800px) {
-  .experience-overview { padding: 0 22px; }
-  .experience-overview-inner { padding: 38px 0 30px; }
-  .experience-intro-bottom { grid-template-columns: 1fr; gap: 18px; text-align: center; }
-  .experience-intro-copy { font-size: 14px; }
-  .experience-company-logos { justify-content: center; }
-  .experience-proof-points { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 14px; }
-  .experience-proof-points > div:nth-child(2) { border-right: 0; }
-  .experience-proof-points > div:nth-child(3) { border-right: 1px solid rgba(32, 43, 39, 0.1); }
-  .experience-accord { margin: 0 8px 32px; }
+  .experience-overview {
+    padding: 0 22px;
+  }
+
+  .experience-overview-inner {
+    padding: 38px 0 30px;
+  }
+
+  .experience-intro-bottom {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    text-align: center;
+  }
+
+  .experience-intro-copy {
+    font-size: 14px;
+  }
+
+  .experience-company-logos {
+    justify-content: center;
+  }
+
+  .experience-main .experience-accord {
+    margin: 0 8px 32px;
+  }
 }
 
 @media (max-width: 480px) {
-  .experience-eyebrow { font-size: 10px; }
-  .experience-intro-heading > p { font-size: 16px; }
-  .experience-proof-points > div { align-items: center; flex-direction: column; gap: 2px; }
-  .experience-proof-points strong { font-size: 19px; }
+  .experience-eyebrow {
+    font-size: 10px;
+  }
+
+  .experience-intro-heading > p {
+    font-size: 16px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .experience-company-logos a { transition: none; }
+  .experience-company-logos a {
+    transition: none;
+  }
 }

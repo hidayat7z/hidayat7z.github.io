@@ -869,6 +869,13 @@ const experience = {
               duration: "December 2024 - Present",
               description:
                 "Lead a five-person content team and the workflows behind a catalog of 130,000+ assets across 50+ categories. Built quality and metadata processes, used AI to support classification and playlist operations, coordinated with 100+ creators, and partnered with product and engineering on releases and issue resolution. Played a significant operational role during a growth phase in which the company raised $400,000+ in funding.",
+              highlights: [
+                { value: "130K+", label: "content assets" },
+                { value: "50+", label: "categories" },
+                { value: "100+", label: "creators coordinated" },
+                { value: "100K+", label: "app downloads" },
+                { value: "$400K+", label: "funding raised" },
+              ],
             },
             {
               title: "Operations Lead",

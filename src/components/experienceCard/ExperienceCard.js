@@ -69,6 +69,16 @@ class ExperienceCard extends Component {
                   <p className="experience-card-description" style={{ color: theme.text }}>
                     {position.description}
                   </p>
+                  {position.highlights && (
+                    <ul className="experience-position-highlights" aria-label={`${position.title} highlights`}>
+                      {position.highlights.map((highlight) => (
+                        <li key={highlight.label}>
+                          <strong>{highlight.value}</strong>
+                          <span>{highlight.label}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               ))}
             </div>

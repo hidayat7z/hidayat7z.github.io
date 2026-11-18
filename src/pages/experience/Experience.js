@@ -159,7 +159,7 @@ class Experience extends Component {
               </div>
               <div className="experience-intro-bottom">
                 <p className="experience-intro-copy" style={{ color: theme.secondaryText }}>
-                  I build products and the operations behind them, from early ideas to execution. At Nasheedio, I helped establish content systems and workflows for 100+ creators and a 130,000+ asset library across 50+ categories, supporting the company’s growth to 100,000+ downloads and $400,000+ in funding.
+                  Founder at 4Ummah, software engineer, and founding member at Nasheedio. I build products, lead cross-functional work, and create the systems and workflows that help teams grow.
                 </p>
                 <div className="experience-company-logos" aria-label="Companies founded and contributed to">
                   <a href="https://www.4ummah.co/" target="_blank" rel="noopener noreferrer" aria-label="4Ummah website">
@@ -171,12 +171,6 @@ class Experience extends Component {
                     <span>Founding Member</span>
                   </a>
                 </div>
-              </div>
-              <div className="experience-proof-points" aria-label="Experience highlights">
-                <div><strong>130K+</strong><span>content assets</span></div>
-                <div><strong>100+</strong><span>creators supported</span></div>
-                <div><strong>100K+</strong><span>app downloads</span></div>
-                <div><strong>$400K+</strong><span>funding raised</span></div>
               </div>
             </div>
           </Fade>
