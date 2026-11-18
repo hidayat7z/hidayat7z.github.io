@@ -1,110 +1,194 @@
 .projects-main {
-  width: 100vw;
+  width: 100%;
   text-align: center;
 }
 
-.basic-projects {
-  margin-left: 5%;
-  margin-right: 5%;
+.projects-page-content {
+  margin: 0 auto;
+  max-width: 1320px;
+  padding: 0 36px;
 }
 
-.projects-heading-div {
+.selected-work-section {
+  padding: 64px 0 78px;
+}
+
+.projects-intro {
+  margin: 0 auto 34px;
+  max-width: 780px;
+}
+
+.projects-eyebrow {
+  color: #a45d38;
+  font: 700 12px/1.5 "Google Sans Medium", sans-serif;
+  letter-spacing: 0.16em;
+  margin: 0 0 12px;
+  text-transform: uppercase;
+}
+
+.projects-intro h1 {
+  font: 500 clamp(34px, 4.6vw, 54px)/1.1 "Google Sans Medium", sans-serif;
+  letter-spacing: -0.045em;
+  margin: 0;
+}
+
+.projects-intro > p:last-child,
+.technical-projects-heading p {
+  font: 17px/1.65 "Google Sans Regular", sans-serif;
+  margin: 14px auto 0;
+  max-width: 660px;
+}
+
+.featured-project-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0 auto;
+  max-width: 1120px;
+  text-align: left;
+}
+
+.featured-project-card {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(32, 43, 39, 0.08);
+  border-radius: 22px;
+  box-shadow: 0 12px 34px rgba(32, 43, 39, 0.055);
   display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  padding: 26px 28px;
+  transition: box-shadow 180ms ease, transform 180ms ease;
 }
 
-.projects-heading-div > * {
-  flex: 1;
+.featured-project-card:hover {
+  box-shadow: 0 18px 42px rgba(32, 43, 39, 0.1);
+  transform: translateY(-3px);
 }
 
-.projects-heading-img-div {
+.featured-project-top {
   align-items: center;
-  justify-content: center;
-}
-
-.projects-heading-text-div {
-  text-align: center;
-}
-
-.projects-heading-img-div > * {
-  max-width: 100%;
-  height: auto;
-}
-
-.projects-heading-text {
-  font-size: 56px;
-  font-weight: 400;
-  font-family: "Google Sans Medium";
-  line-height: 1.1;
-  text-align: center;
-  margin-top: 80px;
-}
-
-.projects-heading-sub-text {
-  font-size: 30px;
-  font-family: "Google Sans Regular";
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.projects-header-detail-text {
-  font-size: 20px;
-  line-height: 30px;
-  margin-top: 0px;
-  margin-left: 20px;
-  margin-right: 20px;
-  font-family: "Google Sans Medium";
-}
-
-.projects-github-button {
   display: flex;
-  justify-content: center;
+  gap: 14px;
 }
+
+.featured-project-logo {
+  align-items: center;
+  background: white;
+  border: 1px solid rgba(32, 43, 39, 0.08);
+  border-radius: 14px;
+  display: flex;
+  flex: 0 0 54px;
+  height: 54px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 5px;
+  width: 54px;
+}
+
+.featured-project-logo img {
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+}
+
+.nasheedio-feature .featured-project-logo img { border-radius: 50%; }
+
+.featured-project-label {
+  color: #66736c;
+  font: 13px "Google Sans Regular", sans-serif;
+}
+
+.featured-project-card h2 {
+  color: #202b27;
+  font: 500 24px/1.25 "Google Sans Medium", sans-serif;
+  letter-spacing: -0.03em;
+  margin: 23px 0 10px;
+}
+
+.featured-project-card > p {
+  color: #66736c;
+  font: 15px/1.7 "Google Sans Regular", sans-serif;
+  margin: 0 0 22px;
+}
+
+.featured-project-card > a {
+  color: #293f34;
+  font: 700 14px "Google Sans Medium", sans-serif;
+  margin-top: auto;
+  text-decoration: none;
+}
+
+.featured-project-card > a:hover { color: #a45d38; }
+
+.technical-projects-section {
+  border-top: 1px solid rgba(32, 43, 39, 0.1);
+  padding: 64px 0 70px;
+}
+
+.technical-projects-heading {
+  align-items: end;
+  display: flex;
+  gap: 28px;
+  justify-content: space-between;
+  margin: 0 auto 28px;
+  max-width: 1120px;
+  text-align: left;
+}
+
+.technical-projects-heading h2 {
+  font: 500 clamp(30px, 4vw, 42px)/1.1 "Google Sans Medium", sans-serif;
+  letter-spacing: -0.04em;
+  margin: 0;
+}
+
+.technical-projects-heading p { font-size: 15px; margin: 10px 0 0; }
 
 .repo-cards-div-main {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 1rem 1rem;
-  margin-left: 40px;
-  margin-right: 40px;
-  margin-top: 60px;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr));
+  margin: 0 auto;
+  max-width: 1120px;
+  text-align: left;
 }
 
-@media (max-width: 1380px) {
-  .projects-heading-text {
-    font-size: 50px;
-    margin-top: 80px;
-  }
-  .projects-heading-sub-text {
-    font-size: 25px;
-  }
+.repo-card-div {
+  border: 1px solid rgba(32, 43, 39, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 8px 22px rgba(32, 43, 39, 0.06);
+  height: 100%;
+  min-height: 180px;
+  padding: 22px;
+  transition: box-shadow 180ms ease, transform 180ms ease;
 }
 
-@media (max-width: 768px) {
-  .projects-heading-text {
-    font-size: 30px;
-    margin-top: 20px;
-  }
+.repo-card-div:hover {
+  box-shadow: 0 14px 30px rgba(32, 43, 39, 0.12);
+  transform: translateY(-2px);
+}
 
-  .projects-heading-sub-text {
-    font-size: 20px;
-  }
+.repo-name { font-size: 18px; }
+.repo-description { font-size: 14px; line-height: 1.55; }
+.repo-details { align-items: flex-end; margin-top: auto; }
+.repo-creation-date { font-size: 12px; }
 
-  .projects-heading-div {
-    flex-direction: column;
-  }
+.technical-projects-more { margin-top: 30px; }
 
-  .projects-header-detail-text {
-    font-size: 16px;
-    margin-right: 0px;
-    margin-left: 0px;
-    line-height: normal;
-    text-align: center;
-  }
+@media (max-width: 700px) {
+  .projects-page-content { padding: 0 20px; }
+  .selected-work-section { padding: 46px 0 54px; }
+  .projects-intro { margin-bottom: 24px; text-align: left; }
+  .projects-intro h1 { font-size: clamp(34px, 9vw, 46px); }
+  .projects-intro > p:last-child { font-size: 15px; }
+  .featured-project-grid { grid-template-columns: 1fr; }
+  .featured-project-card { min-height: 0; padding: 22px; }
+  .featured-project-card h2 { font-size: 22px; }
+  .technical-projects-section { padding: 48px 0 54px; }
+  .technical-projects-heading { align-items: flex-start; flex-direction: column; gap: 18px; }
+  .repo-cards-div-main { grid-template-columns: 1fr; }
+}
 
-  .repo-cards-div-main {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 30px;
-  }
+@media (prefers-reduced-motion: reduce) {
+  .featured-project-card,
+  .repo-card-div { transition: none; }
 }
