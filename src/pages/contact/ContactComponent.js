@@ -17,7 +17,6 @@ export default function Contact({ theme, onToggle }) {
       <main className="contact-content">
         <Fade bottom duration={800} distance="20px">
           <section className="contact-hero">
-            <p className="contact-eyebrow">Open to good conversations</p>
             <h1 className="contact-heading-text" style={{ color: theme.text }}>
               {contactSection.title}
             </h1>
@@ -41,7 +40,7 @@ export default function Contact({ theme, onToggle }) {
 
           <Fade bottom duration={1000} distance="20px">
             <section className="contact-card contact-details-card">
-              <span className="contact-card-icon" aria-hidden="true">✉</span>
+              <span className="contact-card-icon contact-envelope-icon" aria-hidden="true">✉</span>
               <p className="contact-card-eyebrow">Get in touch</p>
               <h2 style={{ color: theme.text }}>Let’s connect</h2>
               <a className="contact-email" href={`mailto:${addressSection.subtitle}`}>

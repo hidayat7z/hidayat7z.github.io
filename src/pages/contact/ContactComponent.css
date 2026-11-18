@@ -74,6 +74,11 @@
   width: 42px;
 }
 
+.contact-envelope-icon {
+  font-size: 30px;
+  line-height: 1;
+}
+
 .contact-card-eyebrow { font-size: 10px; margin-bottom: 5px; }
 
 .contact-card h2 {
