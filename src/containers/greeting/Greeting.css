@@ -81,6 +81,21 @@
   height: auto;
 }
 
+.greeting-image-div {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 8px 0 0 28px;
+}
+
+.builder-illustration {
+  display: block;
+  height: auto;
+  max-height: 500px;
+  max-width: 100%;
+  width: 580px;
+}
+
 /* Media Query */
 @media (max-width: 1380px) {
   .greeting-text {
@@ -126,6 +141,16 @@
   }
   .greeting-main {
     display: block;
+  }
+
+  .greeting-image-div {
+    margin: 24px auto 0;
+    max-width: 480px;
+    padding: 0;
+  }
+
+  .builder-illustration {
+    width: 100%;
   }
 
   .portfolio-repo-btn-div {

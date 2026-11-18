@@ -6,7 +6,6 @@ import ExperienceAccordion from "../../containers/experienceAccordion/Experience
 import "./Experience.css";
 import { experience } from "../../portfolio.js";
 import { Fade } from "react-reveal";
-import ExperienceImg from "./ExperienceImg";
 
 // const experience = {
 // 	title: "Experience",
@@ -150,51 +149,38 @@ class Experience extends Component {
     return (
       <div className="experience-main">
         <Header theme={theme} />
-        <div className="basic-experience">
+        <main className="experience-overview">
           <Fade bottom duration={2000} distance="40px">
-            <div className="experience-heading-div">
-              <div className="experience-heading-img-div">
-                {/* <img
-									src={require(`../../assests/images/${experience["header_image_path"]}`)}
-									alt=""
-								/> */}
-                <ExperienceImg theme={theme} />
+            <div className="experience-overview-inner">
+              <p className="experience-eyebrow">Founder · Operator · Software Engineer</p>
+              <div className="experience-intro-heading">
+                <h1 style={{ color: theme.text }}>Experience</h1>
+                <p style={{ color: theme.secondaryText }}>{experience.subtitle}</p>
               </div>
-              <div className="experience-heading-text-div">
-                <h1
-                  className="experience-heading-text"
-                  style={{ color: theme.text }}
-                >
-                  {experience.title}
-                </h1>
-                <h3
-                  className="experience-heading-sub-text"
-                  style={{ color: theme.text }}
-                >
-                  {experience["subtitle"]}
-                </h3>
-                <p
-                  className="experience-header-detail-text subTitle"
-                  style={{ color: theme.secondaryText }}
-                >
-                  Founder. Software engineer. Founding member at Nasheedio.
-                  Experienced in scaling startup operations, leading
-                  cross-functional teams, and building large-scale content
-                  libraries. Contributed to company growth from early-stage
-                  operations to 100,000+ app downloads and $400,000+ in funding.
+              <div className="experience-intro-bottom">
+                <p className="experience-intro-copy" style={{ color: theme.secondaryText }}>
+                  I build products and the operations behind them, from early ideas to execution. At Nasheedio, I helped establish content systems and workflows for 100+ creators and a 130,000+ asset library across 50+ categories, supporting the company’s growth to 100,000+ downloads and $400,000+ in funding.
                 </p>
                 <div className="experience-company-logos" aria-label="Companies founded and contributed to">
                   <a href="https://www.4ummah.co/" target="_blank" rel="noopener noreferrer" aria-label="4Ummah website">
                     <img src={require("../../assests/images/4ummah-logo.png")} alt="4Ummah" />
+                    <span>Founder</span>
                   </a>
                   <a href="https://app.nasheedio.com/" target="_blank" rel="noopener noreferrer" aria-label="Nasheedio website">
                     <img src={require("../../assests/images/nasheedio-logo.jpeg")} alt="Nasheedio" />
+                    <span>Founding Member</span>
                   </a>
                 </div>
               </div>
+              <div className="experience-proof-points" aria-label="Experience highlights">
+                <div><strong>130K+</strong><span>content assets</span></div>
+                <div><strong>100+</strong><span>creators supported</span></div>
+                <div><strong>100K+</strong><span>app downloads</span></div>
+                <div><strong>$400K+</strong><span>funding raised</span></div>
+              </div>
             </div>
           </Fade>
-        </div>
+        </main>
         <ExperienceAccordion sections={experience["sections"]} theme={theme} />
         <Footer theme={this.props.theme} onToggle={this.props.onToggle} />
         <TopButton theme={this.props.theme} />
