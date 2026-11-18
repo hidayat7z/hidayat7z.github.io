@@ -126,7 +126,7 @@
 }
 
 .technical-projects-heading {
-  align-items: end;
+  align-items: flex-end;
   display: flex;
   gap: 28px;
   justify-content: space-between;

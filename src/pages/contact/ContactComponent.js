@@ -1,133 +1,66 @@
-import React, { Component } from "react";
+import React from "react";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import TopButton from "../../components/topButton/TopButton";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
-import BlogsImg from "./BlogsImg";
-import AddressImg from "./AddressImg";
 import { Fade } from "react-reveal";
 import "./ContactComponent.css";
 import { contactPageData } from "../../portfolio.js";
 
-const ContactData = contactPageData.contactSection;
-const blogSection = contactPageData.blogSection;
-const addressSection = contactPageData.addressSection;
-const phoneSection = contactPageData.phoneSection;
+const { contactSection, blogSection, addressSection, phoneSection } = contactPageData;
 
-class Contact extends Component {
-  render() {
-    const theme = this.props.theme;
-    return (
-      <div className="contact-main">
-        <Header theme={theme} />
-        <div className="basic-contact">
-          <Fade bottom duration={1000} distance="40px">
-            <div className="contact-heading-div">
-              <div className="contact-heading-img-div">
-                <img
-                  src={require(`../../assests/images/${ContactData["profile_image_path"]}`)}
-                  alt=""
-                />
-              </div>
-              <div className="contact-heading-text-div">
-                <h1
-                  className="contact-heading-text"
-                  style={{ color: theme.text }}
-                >
-                  {ContactData["title"]}
-                </h1>
-                <p
-                  className="contact-header-detail-text subTitle"
-                  style={{ color: theme.secondaryText }}
-                >
-                  {ContactData["description"]}
-                </p>
-                <SocialMedia theme={theme} />
-              </div>
-            </div>
+export default function Contact({ theme, onToggle }) {
+  return (
+    <div className="contact-main">
+      <Header theme={theme} />
+      <main className="contact-content">
+        <Fade bottom duration={800} distance="20px">
+          <section className="contact-hero">
+            <p className="contact-eyebrow">Open to good conversations</p>
+            <h1 className="contact-heading-text" style={{ color: theme.text }}>
+              {contactSection.title}
+            </h1>
+            <p className="contact-header-detail-text" style={{ color: theme.secondaryText }}>
+              {contactSection.description}
+            </p>
+            <SocialMedia theme={theme} />
+          </section>
+        </Fade>
+
+        <div className="contact-cards">
+          <Fade bottom duration={900} distance="20px">
+            <section className="contact-card contact-blog-card">
+              <span className="contact-card-icon" aria-hidden="true">✍</span>
+              <p className="contact-card-eyebrow">Ideas & writing</p>
+              <h2 style={{ color: theme.text }}>{blogSection.title}</h2>
+              <p style={{ color: theme.secondaryText }}>{blogSection.subtitle}</p>
+              <Button text="Read my articles ↗" newTab={true} href={blogSection.link} theme={theme} />
+            </section>
           </Fade>
-          <Fade bottom duration={1000} distance="40px">
-            <div className="blog-heading-div">
-              <div className="blog-heading-text-div">
-                <h1 className="blog-heading-text" style={{ color: theme.text }}>
-                  {blogSection["title"]}
-                </h1>
-                <p
-                  className="blog-header-detail-text subTitle"
-                  style={{ color: theme.secondaryText }}
-                >
-                  {blogSection["subtitle"]}
-                </p>
-                <div className="blogsite-btn-div">
-                  <Button
-                    text="Visit My Medium Profile"
-                    newTab={true}
-                    href={blogSection.link}
-                    theme={theme}
-                  />
-                </div>
-              </div>
-              <div className="blog-heading-img-div">
-                {/* <img
-											src={require(`../../assests/images/${blogSection["avatar_image_path"]}`)}
-											alt=""
-										/> */}
-                <BlogsImg theme={theme} />
-              </div>
-            </div>
-          </Fade>
-          <Fade bottom duration={1000} distance="40px">
-            <div className="address-heading-div">
-              <div className="contact-heading-img-div">
-                {/* <img
-											src={require(`../../assests/images/${addressSection["avatar_image_path"]}`)}
-											alt=""
-										/> */}
-                <AddressImg theme={theme} />
-              </div>
-              <div className="address-heading-text-div">
-                <h1
-                  className="address-heading-text"
-                  style={{ color: theme.text }}
-                >
-                  {addressSection["title"]}
-                </h1>
-                <p
-                  className="contact-header-detail-text subTitle"
-                  style={{ color: theme.secondaryText }}
-                >
-                  {addressSection["subtitle"]}
-                </p>
-                <h1
-                  className="address-heading-text"
-                  style={{ color: theme.text }}
-                >
-                  {phoneSection["title"]}
-                </h1>
-                <p
-                  className="contact-header-detail-text subTitle"
-                  style={{ color: theme.secondaryText }}
-                >
-                  {phoneSection["subtitle"]}
-                </p>
-                <div className="address-btn-div">
-                  <Button
-                    text="Visit on Google Maps"
-                    newTab={true}
-                    href={addressSection.location_map_link}
-                    theme={theme}
-                  />
-                </div>
-              </div>
-            </div>
+
+          <Fade bottom duration={1000} distance="20px">
+            <section className="contact-card contact-details-card">
+              <span className="contact-card-icon" aria-hidden="true">✉</span>
+              <p className="contact-card-eyebrow">Get in touch</p>
+              <h2 style={{ color: theme.text }}>Let’s connect</h2>
+              <a className="contact-email" href={`mailto:${addressSection.subtitle}`}>
+                {addressSection.subtitle}
+              </a>
+              {phoneSection.subtitle && (
+                <a className="contact-phone" href={`tel:${phoneSection.subtitle.replace(/[^+\d]/g, "")}`}>
+                  {phoneSection.subtitle}
+                </a>
+              )}
+              <a className="contact-location-link" href={addressSection.location_map_link} target="_blank" rel="noopener noreferrer">
+                Kolkata, India <span aria-hidden="true">↗</span>
+              </a>
+            </section>
           </Fade>
         </div>
-        <Footer theme={this.props.theme} onToggle={this.props.onToggle} />
-        <TopButton theme={this.props.theme} />
-      </div>
-    );
-  }
+      </main>
+      <Footer theme={theme} onToggle={onToggle} />
+      <TopButton theme={theme} />
+    </div>
+  );
 }
-
-export default Contact;

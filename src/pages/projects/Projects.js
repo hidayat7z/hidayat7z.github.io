@@ -41,7 +41,6 @@ class Projects extends Component {
           <Fade bottom duration={900} distance="24px">
             <section className="selected-work-section" aria-labelledby="selected-work-title">
               <div className="projects-intro">
-                <p className="projects-eyebrow">Selected work</p>
                 <h1 id="selected-work-title" style={{ color: theme.text }}>
                   Products and systems built to make a difference.
                 </h1>
@@ -72,7 +71,6 @@ class Projects extends Component {
           <section className="technical-projects-section" aria-labelledby="technical-projects-title">
             <div className="technical-projects-heading">
               <div>
-                <p className="projects-eyebrow">Code, data & experiments</p>
                 <h2 id="technical-projects-title" style={{ color: theme.text }}>
                   Technical Projects
                 </h2>
