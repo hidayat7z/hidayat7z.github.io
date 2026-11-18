@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "13a60cb861c553812b19a5e3cabc3c0f",
+    "revision": "595b30f1267aba5dd540d0ee7156469b",
     "url": "./index.html"
   },
   {
-    "revision": "54e73a125c949e5e5969",
-    "url": "./static/css/main.2f3a40fa.chunk.css"
+    "revision": "3c10f47879bbbda7a71e",
+    "url": "./static/css/main.473ad3aa.chunk.css"
   },
   {
-    "revision": "1e7a1891b52b1c9bf796",
-    "url": "./static/js/2.c8d147a7.chunk.js"
+    "revision": "69f283bc2e5ffcc82bab",
+    "url": "./static/js/2.fb68a11d.chunk.js"
   },
   {
-    "revision": "54e73a125c949e5e5969",
-    "url": "./static/js/main.402dbf9f.chunk.js"
+    "revision": "3c10f47879bbbda7a71e",
+    "url": "./static/js/main.fb2767e0.chunk.js"
   },
   {
     "revision": "1a27038c5115d044f6f9",
     "url": "./static/js/runtime-main.fff6ee50.js"
   },
   {
-    "revision": "597f9ea2c66998c8414deed3ebf46a2a",
-    "url": "./static/media/4ummah-logo.597f9ea2.png"
+    "revision": "91c31029b7986ff9781614fad3ffc646",
+    "url": "./static/media/4ummah-logo.91c31029.png"
   },
   {
     "revision": "21f233e19402cc4a66866a7f31191f0d",
